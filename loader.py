@@ -25,4 +25,5 @@ if __name__=='__main__':
     	print('-------------------------------------')
     	if i>20:
     	   break
+    print(len(totalData))
     print(len(filteredDatabase))
