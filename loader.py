@@ -17,11 +17,12 @@ if __name__=='__main__':
         data = arff.loadarff(PATH+dataset)
         totalData.extend(data[0])
     joinUDPColumns(totalData)
-    filterClasses(totalData)
-    for i in range(0, len(totalData)):
+    filteredResults = filterClasses(totalData)
+    filteredDatabase = filteredResults['database']
+    for i in range(0, len(filteredDatabase)):
     	print('Registro completo')
-    	print(totalData[i])	
+    	print(filteredDatabase[i])	
     	print('-------------------------------------')
     	if i>20:
     	   break
-    print(len(totalData))
+    print(len(filteredDatabase))
